@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inoxico", "Inoxico\Inoxico.csproj", "{A8A37CE8-C626-4542-ABF8-05CECCB84229}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringTests", "StringTests\StringTests.csproj", "{E94AA007-5350-4044-A6D1-A1B73BC0BBEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PitTests", "PitTests\PitTests.csproj", "{3B09F8F3-C646-4987-BEDD-5E2B10454198}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8A37CE8-C626-4542-ABF8-05CECCB84229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8A37CE8-C626-4542-ABF8-05CECCB84229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8A37CE8-C626-4542-ABF8-05CECCB84229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8A37CE8-C626-4542-ABF8-05CECCB84229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E94AA007-5350-4044-A6D1-A1B73BC0BBEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E94AA007-5350-4044-A6D1-A1B73BC0BBEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E94AA007-5350-4044-A6D1-A1B73BC0BBEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E94AA007-5350-4044-A6D1-A1B73BC0BBEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B09F8F3-C646-4987-BEDD-5E2B10454198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B09F8F3-C646-4987-BEDD-5E2B10454198}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B09F8F3-C646-4987-BEDD-5E2B10454198}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B09F8F3-C646-4987-BEDD-5E2B10454198}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0FDB7FDA-C22E-43A1-A754-42B16266AF96}
+	EndGlobalSection
+EndGlobal
