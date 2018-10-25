@@ -9,9 +9,9 @@ namespace StringTests
     {
         [Theory]
         [InlineData("Single Sentance", 1)]
-        public void MultipleSentancesShouldSeperateIntoSentances(string sentance, int sentanceCount)
+        public void MultipleSentancesShouldSeperateIntoSentances(string phrase, int sentanceCount)
         {
-            Assert.Equal(sentanceCount, Inoxico.Strings.SeperateSentances(sentance).Count());
+            Assert.Equal(sentanceCount, Inoxico.TechnicalTest.LongestSentance.SeperateIntoSentances(phrase).Count());
         }
     }
 }

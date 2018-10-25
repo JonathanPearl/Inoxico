@@ -10,7 +10,15 @@ namespace Inoxico.TechnicalTest
             var sentances = new List<string> () ;
             sentances.Add(phrase);
 
+            return 1;
+        }
+
+        public static IEnumerable<string> SeperateIntoSentances(string phrase)
+        {
+            var sentances = new List<string>();
+            sentances.Add(phrase);
             return sentances;
+
         }
     }
 }
