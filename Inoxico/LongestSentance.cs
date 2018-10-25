@@ -7,16 +7,14 @@ namespace Inoxico.TechnicalTest
     {
         public static int Solution(string phrase)
         {
-            var sentances = new List<string> () ;
-            sentances.Add(phrase);
+
 
             return 1;
         }
 
         public static IEnumerable<string> SeperateIntoSentances(string phrase)
         {
-            var sentances = new List<string>();
-            sentances.Add(phrase);
+            var sentances = phrase.Split('.');
             return sentances;
 
         }
