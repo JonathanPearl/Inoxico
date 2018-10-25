@@ -16,6 +16,8 @@ namespace StringTests
             Assert.Equal(sentanceCount, Inoxico.TechnicalTest.LongestSentance.PhraseIntoSentances(phrase).Count());
         }
 
+     
+
         [Theory]
         [InlineData("One. Two", 2)]
         [InlineData("One? Two", 2)]
@@ -25,9 +27,14 @@ namespace StringTests
             Assert.Equal(sentanceCount, Inoxico.TechnicalTest.LongestSentance.PhraseIntoSentances(phrase).Count());
         }
 
+
+
         [Theory]
         [InlineData("One Two Three", 3)]
-        [InlineData("One Two Three ", 3)]
+        [InlineData("Forget CVs ", 2)]
+        [InlineData(" ", 0)]
+        [InlineData("Save Time ", 2)]
+        [InlineData("X X ", 2)]
         public void GetWordsInSentance(string sentance, int wordCount)
         {
             Assert.Equal(wordCount, Inoxico.TechnicalTest.LongestSentance.SentaceIntoWords(sentance).Count());

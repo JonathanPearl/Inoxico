@@ -21,6 +21,8 @@ namespace Inoxico.TechnicalTest
 
         }
 
+
+
         public static IEnumerable<string> SentaceIntoWords(string sentance)
         {
             var wordSplitter = ' ';
