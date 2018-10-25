@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Inoxico.TechnicalTest
 {
-    public class LongestSentance
+    public class LongestSentanceAnswer
     {
         public static int Solution(string phrase)
         {

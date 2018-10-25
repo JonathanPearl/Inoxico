@@ -10,9 +10,10 @@ namespace StringTests
     {
         [Theory]
         [InlineData("We test coders.Give us a try?",4)]
+        [InlineData("Forget CVs..Save time . x x", 2)]
         public void LongestWordsInPhraseIs (string phrase, int maxWords)
         {
-            Assert.Equal(maxWords, Inoxico.TechnicalTest.LongestSentance.Solution(phrase));
+            Assert.Equal(maxWords, Inoxico.TechnicalTest.LongestSentanceAnswer.Solution(phrase));
         }
 
         [Theory]
@@ -21,7 +22,7 @@ namespace StringTests
         [InlineData("We test coders. Give us a try?", 3)]
         public void MultipleSentancesShouldSeperateIntoSentances(string phrase, int sentanceCount)
         {
-            Assert.Equal(sentanceCount, Inoxico.TechnicalTest.LongestSentance.PhraseIntoSentances(phrase).Count());
+            Assert.Equal(sentanceCount, Inoxico.TechnicalTest.LongestSentanceAnswer.PhraseIntoSentances(phrase).Count());
         }
 
         [Theory]
@@ -30,7 +31,7 @@ namespace StringTests
         [InlineData("One! Two", 2)]
         public void SupportSentanceEndings(string phrase, int sentanceCount)
         {
-            Assert.Equal(sentanceCount, Inoxico.TechnicalTest.LongestSentance.PhraseIntoSentances(phrase).Count());
+            Assert.Equal(sentanceCount, Inoxico.TechnicalTest.LongestSentanceAnswer.PhraseIntoSentances(phrase).Count());
         }
 
 
@@ -43,7 +44,7 @@ namespace StringTests
         [InlineData("X X ", 2)]
         public void GetWordsInSentance(string sentance, int wordCount)
         {
-            Assert.Equal(wordCount, Inoxico.TechnicalTest.LongestSentance.SentaceIntoWords(sentance).Count());
+            Assert.Equal(wordCount, Inoxico.TechnicalTest.LongestSentanceAnswer.SentaceIntoWords(sentance).Count());
 
         }
 
@@ -51,7 +52,7 @@ namespace StringTests
         [InlineData(new string [] {"A"," ","B"}, new string [] { "A", "B" })]
         public void EmptyWordsShouldntExist(string [] sentance, string [] words)
         {
-            Assert.Equal(words, Inoxico.TechnicalTest.LongestSentance.FilterEmptyWords(sentance));
+            Assert.Equal(words, Inoxico.TechnicalTest.LongestSentanceAnswer.FilterEmptyWords(sentance));
         }
 
 
