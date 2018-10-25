@@ -10,9 +10,10 @@ namespace StringTests
         [Theory]
         [InlineData("Single Sentance", 1)]
         [InlineData("Two. Sentances", 2)]
+        [InlineData ("We test coders. Give us a try?",3)]
         public void MultipleSentancesShouldSeperateIntoSentances(string phrase, int sentanceCount)
         {
-            Assert.Equal(sentanceCount, Inoxico.TechnicalTest.LongestSentance.SeperateIntoSentances(phrase).Count());
+            Assert.Equal(sentanceCount, Inoxico.TechnicalTest.LongestSentance.PhraseIntoSentances(phrase).Count());
         }
 
         [Theory]
@@ -21,7 +22,7 @@ namespace StringTests
         [InlineData("One! Two",2)]
         public void SupportSentanceEndings (string phrase, int sentanceCount)
         {
-            Assert.Equal(sentanceCount, Inoxico.TechnicalTest.LongestSentance.SeperateIntoSentances(phrase).Count());
+            Assert.Equal(sentanceCount, Inoxico.TechnicalTest.LongestSentance.PhraseIntoSentances(phrase).Count());
         }
     }
 }

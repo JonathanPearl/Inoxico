@@ -7,12 +7,12 @@ namespace Inoxico.TechnicalTest
     {
         public static int Solution(string phrase)
         {
-
+            var sentances = PhraseIntoSentances(phrase);
 
             return 1;
         }
 
-        public static IEnumerable<string> SeperateIntoSentances(string phrase)
+        public static IEnumerable<string> PhraseIntoSentances(string phrase)
         {
 
             var sentanceEndings = new char[] { '.', '!', '?' };
