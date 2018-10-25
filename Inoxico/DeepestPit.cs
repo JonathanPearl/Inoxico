@@ -7,6 +7,32 @@ namespace Inoxico.TechnicalTest
 {
     public class DeepestPitAnswer
     {
+
+        public static int Solution(int[] points)
+        {
+            var peaks = GetPeakLocations(points);
+            var pits = GetPitLocations(points); // Needs to be some logic here with difference
+            var maximumpit = -1;
+            var count = 0;
+            while (count <= peaks.Length-1)
+            {
+                foreach (var pit in pits)
+                {
+                    if (peaks[count]<pit)
+                        if (peaks[count+1]>pit)
+                        {
+                            var startingvalue = points[peaks[count]];
+                            var pitValue = points[pit];
+                            var endValue = points[peaks[count + 1]];
+                            var newPitSize = PitDepth(new int[] { startingvalue, pitValue, endValue });
+                            if (maximumpit < newPitSize) maximumpit = newPitSize;
+                        }
+                }
+                count++;
+            }
+            return maximumpit;
+        }
+
         public static bool IsPit(int[] locationValues)
         {
             if (locationValues[0] > locationValues[1]) 
@@ -14,7 +40,7 @@ namespace Inoxico.TechnicalTest
                 return false;
         }
 
-        public static IEnumerable<int> GetPeakLocations(int[] locationValues)
+        public static int [] GetPeakLocations(int[] locationValues)
         {
             var peakLocations = new List<int>();
 
