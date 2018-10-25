@@ -21,5 +21,13 @@ namespace Inoxico.TechnicalTest
             var minDepth = depth1 < depth2 ? depth1 : depth2; // Find which depth is smaller
             return minDepth;
         }
+
+        public static bool IsPeak(int[] locationValues)
+        {
+            if (locationValues[0] < locationValues[1])
+                if (locationValues[2] < locationValues[1])
+                    return true;
+            return false;
+        }
     }
 }
