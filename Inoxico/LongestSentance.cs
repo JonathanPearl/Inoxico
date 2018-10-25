@@ -25,7 +25,13 @@ namespace Inoxico.TechnicalTest
         {
             var wordSplitter = ' ';
             var words = sentance.Split(wordSplitter);
+           
             return words;
+        }
+
+        public static IEnumerable<string> FilterEmptyWords(string[] sentance)
+        {
+            throw new NotImplementedException();
         }
     }
 }
