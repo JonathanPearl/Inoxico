@@ -3,7 +3,7 @@ using Xunit;
 
 namespace PitTests
 {
-    public class UnitTest1
+    public class TestDeepestPit
     {
         [Fact]
         public void Test1()

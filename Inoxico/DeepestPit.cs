@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Inoxico
+
+namespace Inoxico.TechnicalTest
 {
-    class MaximumPit
+    class DeepestPitAnswer
     {
     }
 }

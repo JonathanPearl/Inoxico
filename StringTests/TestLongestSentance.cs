@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace StringTests
 {
-    public class TestStrings
+    public class TestLongestSentance
     {
         [Theory]
         [InlineData("Single Sentance", 1)]

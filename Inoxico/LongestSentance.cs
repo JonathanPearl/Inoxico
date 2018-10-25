@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Inoxico
+namespace Inoxico.TechnicalTest
 {
-    public class Strings
+    public class LongestSentance
     {
-        public static IEnumerable<object> SeperateSentances(string sentance)
+        public static int Solution(string phrase)
         {
             var sentances = new List<string> () ;
-            sentances.Add(sentance);
+            sentances.Add(phrase);
 
             return sentances;
         }
