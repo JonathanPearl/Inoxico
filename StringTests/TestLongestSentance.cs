@@ -14,5 +14,14 @@ namespace StringTests
         {
             Assert.Equal(sentanceCount, Inoxico.TechnicalTest.LongestSentance.SeperateIntoSentances(phrase).Count());
         }
+
+        [Theory]
+        [InlineData("One. Two",2)]
+        [InlineData("One? Two",2)]
+        [InlineData("One! Two",2)]
+        public void SupportSentanceEndings (string phrase, int sentanceCount)
+        {
+            Assert.Equal(sentanceCount, Inoxico.TechnicalTest.LongestSentance.SeperateIntoSentances(phrase).Count());
+        }
     }
 }
