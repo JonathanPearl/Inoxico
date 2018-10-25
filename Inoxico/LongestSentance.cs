@@ -20,5 +20,12 @@ namespace Inoxico.TechnicalTest
             return sentances;
 
         }
+
+        public static IEnumerable<string> SentaceIntoWords(string sentance)
+        {
+            var wordSplitter = ' ';
+            var words = sentance.Split(wordSplitter);
+            return words;
+        }
     }
 }
