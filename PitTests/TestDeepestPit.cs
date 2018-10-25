@@ -17,6 +17,7 @@ namespace PitTests
         [Theory] // This is a counter Example to Test for Hills
         [InlineData(new int[] { 3, 5, 0 })]
         [InlineData(new int[] { 1, 3, 2 })]
+        [InlineData(new int[] { 0, 0, 0 })]
         public void LocationsAreNotPits(int[] locationVaues)
         {
             Assert.False(Inoxico.TechnicalTest.DeepestPitAnswer.IsLocationPit(locationVaues));
