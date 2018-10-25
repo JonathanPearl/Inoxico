@@ -9,6 +9,8 @@ namespace PitTests
 
         [Theory]
         [InlineData (new int [] { 1,2,1}, new int [] { 1 } )]
+        [InlineData(new int[] { 2, 0, 2 }, new int[] { 0,2 })]
+        [InlineData(new int[] { 1, 2, 1  ,3 }, new int[] { 1,3 })]
         public void PeakLocations (int [] locationValues, int [] peakLocations)
         {
             Assert.Equal(peakLocations, Inoxico.TechnicalTest.DeepestPitAnswer.GetPeakLocations(locationValues));

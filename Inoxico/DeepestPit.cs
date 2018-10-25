@@ -16,7 +16,21 @@ namespace Inoxico.TechnicalTest
 
         public static IEnumerable<int> GetPeakLocations(int[] locationValues)
         {
-            return new int[] { 1 };
+            var peakLocations = new List<int>();
+
+            if (locationValues[0] > locationValues[1]) peakLocations.Add(0); // First Value Is Peak
+            var count = 1;
+            while (count < locationValues.Length-1)
+            {
+                var currentLocation = new int[] { locationValues[count - 1], locationValues[count], locationValues[count + 1] };
+                if (IsPeak(currentLocation)) peakLocations.Add(count);
+
+                count++;
+            }
+            
+
+            if (locationValues[locationValues.Length-1] > locationValues[locationValues.Length - 2]) peakLocations.Add(count); // Last Value Peak
+            return peakLocations.ToArray();
         }
 
         public static int PitDepth(int[] locationValues)
