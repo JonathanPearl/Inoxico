@@ -14,13 +14,9 @@ namespace Inoxico.TechnicalTest
 
         public static IEnumerable<string> SeperateIntoSentances(string phrase)
         {
-            
-            var sentanceEndings = new List<char>();
-            sentanceEndings.Add('.');
-            sentanceEndings.Add('!');
-            sentanceEndings.Add('?');
 
-            var sentances = phrase.Split(sentanceEndings.ToArray());
+            var sentanceEndings = new char[] { '.', '!', '?' };
+            var sentances = phrase.Split(sentanceEndings);
             return sentances;
 
         }
