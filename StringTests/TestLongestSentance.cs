@@ -5,8 +5,16 @@ using System.Linq;
 
 namespace StringTests
 {
+
     public class TestLongestSentance
     {
+        [Theory]
+        [InlineData("We test coders.Give us a try?",4)]
+        public void LongestWordsInPhraseIs (string phrase, int maxWords)
+        {
+            Assert.Equal(maxWords, Inoxico.TechnicalTest.LongestSentance.Solution(phrase));
+        }
+
         [Theory]
         [InlineData("Single Sentance", 1)]
         [InlineData("Two. Sentances", 2)]
@@ -15,8 +23,6 @@ namespace StringTests
         {
             Assert.Equal(sentanceCount, Inoxico.TechnicalTest.LongestSentance.PhraseIntoSentances(phrase).Count());
         }
-
-     
 
         [Theory]
         [InlineData("One. Two", 2)]
