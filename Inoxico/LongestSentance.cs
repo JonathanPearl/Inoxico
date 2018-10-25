@@ -31,7 +31,15 @@ namespace Inoxico.TechnicalTest
 
         public static IEnumerable<string> FilterEmptyWords(string[] sentance)
         {
-            throw new NotImplementedException();
+            var words = new List<string>();
+           foreach (var word in sentance)
+            {
+                if (!String.IsNullOrWhiteSpace(word))
+                {
+                    words.Add(word);
+                }
+            }
+            return words.ToArray();
         }
     }
 }
