@@ -8,8 +8,16 @@ namespace Inoxico.TechnicalTest
         public static int Solution(string phrase)
         {
             var sentances = PhraseIntoSentances(phrase);
-
-            return 1;
+            var maximumWords = 0;
+            foreach (var sentance in sentances)
+            {
+                var words = SentaceIntoWords(sentance);
+                if (words.Length > maximumWords )
+                {
+                    maximumWords = words.Length;
+                }
+            }
+            return maximumWords;
         }
 
         public static IEnumerable<string> PhraseIntoSentances(string phrase)
@@ -23,7 +31,7 @@ namespace Inoxico.TechnicalTest
 
 
 
-        public static IEnumerable<string> SentaceIntoWords(string sentance)
+        public static string [] SentaceIntoWords(string sentance)
         {
             var wordSplitter = ' ';
             var wordsWithEmpty = sentance.Split(wordSplitter);
