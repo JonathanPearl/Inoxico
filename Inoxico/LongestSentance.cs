@@ -24,12 +24,12 @@ namespace Inoxico.TechnicalTest
         public static IEnumerable<string> SentaceIntoWords(string sentance)
         {
             var wordSplitter = ' ';
-            var words = sentance.Split(wordSplitter);
-           
-            return words;
+            var wordsWithEmpty = sentance.Split(wordSplitter);
+            var wordsValidated = FilterEmptyWords(wordsWithEmpty);
+            return wordsValidated;
         }
 
-        public static IEnumerable<string> FilterEmptyWords(string[] sentance)
+        public static string[] FilterEmptyWords(string[] sentance)
         {
             var words = new List<string>();
            foreach (var word in sentance)
