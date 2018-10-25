@@ -8,13 +8,13 @@ namespace PitTests
     {
         [Theory]
         [InlineData (new int[] { 3, -2, 0 })]
-        [InlineData(new int[] { 1, -3, 2 })]
+        [InlineData(new int[] { 1, -3, 2 })] // Note This location Skips a Position - This should be kept in mind
         public void IsLocationPit(int [] locationVaues)
         {
             Assert.True(Inoxico.TechnicalTest.DeepestPitAnswer.IsLocationPit(locationVaues));
         }
 
-        [Theory]
+        [Theory] // This is a counter Example to Test for Hills
         [InlineData(new int[] { 3, 5, 0 })]
         [InlineData(new int[] { 1, 3, 2 })]
         public void LocationsAreNotPits(int[] locationVaues)
@@ -23,11 +23,11 @@ namespace PitTests
         }
 
         [Theory]
-        [InlineData(new int[] { 3, -2, 0 })]
-        [InlineData(new int[] { 1, -3, 2 })]
-        public void PitDepth(int[] locationVaues)
+        [InlineData(new int[] { 3, -2, 0 },2)]
+        [InlineData(new int[] { 1, -3, 2 }, 4)]
+        public void PitDepth(int[] locationVaues, int pitDepth)
         {
-            Assert.True(Inoxico.TechnicalTest.DeepestPitAnswer.IsLocationPit(locationVaues));
+            Assert.Equal(pitDepth, Inoxico.TechnicalTest.DeepestPitAnswer.PitDepth(locationVaues));
         }
     }
 }
