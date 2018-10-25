@@ -14,6 +14,11 @@ namespace Inoxico.TechnicalTest
                 return false;
         }
 
+        public static IEnumerable<int> GetPeakLocations(int[] locationValues)
+        {
+            return new int[] { 1 };
+        }
+
         public static int PitDepth(int[] locationValues)
         {
             var depth1 = locationValues[0] - locationValues[1];

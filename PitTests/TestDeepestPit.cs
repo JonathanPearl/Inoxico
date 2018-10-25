@@ -7,6 +7,13 @@ namespace PitTests
     public class TestDeepestPit
     {
 
+        [Theory]
+        [InlineData (new int [] { 1,2,1}, new int [] { 1 } )]
+        public void PeakLocations (int [] locationValues, int [] peakLocations)
+        {
+            Assert.Equal(peakLocations, Inoxico.TechnicalTest.DeepestPitAnswer.GetPeakLocations(locationValues));
+        }
+
 
        [Theory]
        [InlineData (new int [] {1,2,1})]
@@ -20,7 +27,7 @@ namespace PitTests
         [Theory]
         [InlineData (new int[] { 3, -2, 0 })]
         [InlineData(new int[] { 1, -3, 2 })] // Note This location Skips a Position - This should be kept in mind
-        public void IsPit(int [] locationValues)
+        public void IsPit (int [] locationValues)
         {
             Assert.True(Inoxico.TechnicalTest.DeepestPitAnswer.IsLocationPit(locationValues));
         }
